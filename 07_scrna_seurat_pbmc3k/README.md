@@ -8,7 +8,7 @@
 
 ## Procedure
 
-The source PDF is a written report with console screenshots; it does not contain the full code. The only code recoverable is what is visible in the screenshots (see note under Files).
+
 
 **Part A (terminal)** - the archive `pbmc3k_filtered_gene_bc_matrices.tar.gz` was checked and extracted into `data/pbmc3k`; the three expected files (barcodes.tsv, genes.tsv, matrix.mtx) were confirmed inside `filtered_gene_bc_matrices/hg19/`; a results folder was created and R was started from the bio-env directory. (No commands are shown in the PDF, so there is no script for this part.)
 
