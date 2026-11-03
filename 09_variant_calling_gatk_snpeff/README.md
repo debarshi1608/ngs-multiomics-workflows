@@ -32,7 +32,7 @@ SnpEff summary of the annotated VCF:
 ![SnpEff impact / functional class](results/fig07_snpeff_effects_by_impact_and_class.png)
 
 ## Interpretation
-Written in the report.
+
 
 **IGV before variant calling.** Good read coverage across the selected region, reads aligned continuously to the reference, and a few mismatching bases. These mismatches are potential variant sites that HaplotypeCaller evaluates and reports in the VCF.
 
