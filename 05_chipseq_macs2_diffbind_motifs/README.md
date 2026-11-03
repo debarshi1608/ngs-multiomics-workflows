@@ -104,11 +104,9 @@ Default (library-size) normalisation: factors 1.5982, 1.7871, 0.3941, 0.2207 →
 - **Narrow vs broad:** sharp tall peaks with high fold enrichment are typical of sequence-specific TF binding; wide plateau-like peaks spanning kilobases indicate chromatin-modifying complexes or histone marks (e.g. H3K27me3, H3K9me3).
 - **Output files:** narrowPeak column 5 = normalised score (−10·log10 q), column 7 = fold enrichment, column 10 = summit offset; broadPeak has no single-base summit; `.xls` lists pileup, fold enrichment, −log10 p and q.
 
-The source report gives no written commentary on the DiffBind or HOMER results beyond the printed output.
 
-## Notes
-- Sample 4 (Mutant rep 2) has only 98 peaks and 434,654 reads, far below the other samples — visible in the tables above.
-- The tail of `export_results.R` and one output file name are garbled in the source PDF (see comments in `scripts/04_diffbind_analysis.R`).
+
+
 
 ## Files
 ```
