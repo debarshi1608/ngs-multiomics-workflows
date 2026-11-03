@@ -1,5 +1,5 @@
 # Source PDF: Seurat_Debarshi-1.pdf
-# Only the code lines visible in the PDF's console screenshots (Outputs 5-7) are reproduced here.
+
 # Look at cluster IDs of the first 5 cells
 head(Idents(pbmc), 5)
 
