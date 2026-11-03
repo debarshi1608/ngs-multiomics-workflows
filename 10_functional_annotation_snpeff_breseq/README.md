@@ -12,7 +12,7 @@
 ## Results
 **SnpEff example record** (chromosome I, position 32145, C→T): gene GDH3 (YAL062W), `c.579C>T`, `p.Ala193Ala`, `synonymous_variant`, LOW impact. The same record also carries upstream/downstream annotations for neighbouring genes (FLO9, BDH2, BDH1, ECM1, YAL059C-A) as MODIFIER.
 
-**VarScan:** the report shows the terminal summaries of `pileup2snp` / `pileup2indel` runs with the two filters (figures below); no further numbers are given in the text.
+**VarScan:** the report shows the terminal summaries of `pileup2snp` / `pileup2indel` runs with the two filters (figures below); .
 
 **breseq (E. coli, SRR12340679):**
 - Run time 1 h 11 min 58 s with Bowtie2 v2.5.5 and R v4.5.2 (alignment, junction identification and evidence examination < 5 min combined; ~58 min for output generation and mutation prediction).
