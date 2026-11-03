@@ -54,17 +54,13 @@ The heatmap uses the 370 exactTest DEGs.
 ![TPM heatmap](results/fig07_heatmap_log2_TPM.png)
 
 ## Interpretation
-Written by the student in the notebook (GO figure):
+
 
 > The x-axis displays statistical significance using −log10(P-value), meaning points further to the right carry higher statistical confidence. Pink bars indicate the overall enrichment level for each GO term, while the blue circles show the number of upregulated genes mapped to that term, where larger circles represent a higher gene count.
 >
 > Functional enrichment analysis reveals that genes upregulated in conB relative to conA are heavily focused on ribosome assembly and RNA processing. Ribosome biogenesis stands out as the single most enriched biological process, along with ribonucleoprotein complex assembly, rRNA metabolism, and pre-rRNA processing. Both small and large ribosomal subunit maturation terms are also strongly represented. Overall, these results indicate that switching from conA to conB primarily drives cellular investment into building ribosomes, processing rRNA, and scaling up the core translational machinery.
 
-No written interpretation exists for the other steps in the source notebooks.
 
-## Notes
-- `Debarshi_15_8.pdf` is the superset of `Debarshi_13_08_part2.pdf` (adds GO enrichment). Both carry the title "day_8_genome_assembly", which is a mislabel; the content is RNA-seq.
-- The Bowtie2 alignment was shown for conA_rep1; the PDF says it is to be repeated for all four files.
 
 ## Files
 ```
