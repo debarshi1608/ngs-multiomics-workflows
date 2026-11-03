@@ -63,8 +63,7 @@
 - *New-junction evidence:* the candidate breakpoints are characteristic of mobile-element activity and structural rearrangements (IS1, IS150); calls range from fixed junctions (e.g. ygcE/queE, lysQ/nadA) to subclonal/polymorphic ones (24.0 % – 64.3 %). These split-read alignments resolve genomic reorganisations that standard reference-alignment pipelines routinely miss.
 - *Skew score and filters:* the probability of observing no read start at a position and strand is 0.93658 for contig U00096. To separate true breakpoints from alignment artefacts, breseq applies thresholds on junction coverage and requires at least 1 overlapping base on each uniquely aligned flank, so only junctions with balanced, high-confidence split-read support are kept.
 
-## Notes
-- In the report, the printed annotation line for chr I:32145 shows QUAL 71.32, while the "detailed breakdown" text quotes QUAL 159.14. Both are as written in the source.
+
 
 ## Files
 ```
