@@ -1,4 +1,4 @@
-# R Distributions Basics (Lab 1)
+# R Distributions Basics 
 
 **Aim:** Generate random numbers from a uniform and a normal distribution in R, compare their mean/median and density plots, and see the effect of a log10 transformation on density plots.
 **Data / organism:** Simulated data only (`runif`, `rnorm`); no biological dataset.
