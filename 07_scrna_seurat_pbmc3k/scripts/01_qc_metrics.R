@@ -1,5 +1,5 @@
 # Source PDF: Seurat_Debarshi-1.pdf
-# Only the code lines visible in the PDF's console screenshots (Output 3) are reproduced here.
+
 # Mitochondrial percentage
 pbmc[["percent.mt"]] <- PercentageFeatureSet(pbmc, pattern = "^MT-")
 
