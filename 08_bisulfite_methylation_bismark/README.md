@@ -47,7 +47,6 @@
 ![IGV base-pair resolution (report Figure 2)](results/fig06_IGV_base_pair_resolution.png)
 
 ## Interpretation
-Written in the report.
 
 **IGV, broad region (Figure 1).** Blue vertical spikes (bedGraph track) mark positions where Bismark called cytosine methylation; spike height is the methylation percentage, flat/empty regions mean no signal or no reported methylation. Green coverage peaks (BAM track) are read pile-ups; greater height = higher read depth.
 
