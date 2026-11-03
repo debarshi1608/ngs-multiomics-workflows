@@ -24,4 +24,4 @@ Eleven computational biology analyses (microarray, RNA-seq, splicing, ChIP-seq, 
 | 10 | [Functional annotation, VarScan, breseq](10_functional_annotation_snpeff_breseq) | SnpEff, VarScan, breseq | yes |
 | 11 | [Genome assembly: baseline, k-mer, depth](11_genome_assembly_velvet_kmer_depth) | Velvet, QUAST, BUSCO, RagTag | yes |
 
-All content comes from the original lab reports in each `reports/` folder; nothing was added beyond them.
+
