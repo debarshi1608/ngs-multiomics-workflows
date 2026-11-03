@@ -49,7 +49,7 @@
 ![Fig 8 ANCOM-BC barplot](results/fig08_ancombc_barplot_subject2_vs_subject1.png)
 
 ## Interpretation
-Written in the report, figure by figure.
+
 
 **Fig 1 — taxa barplot (domain).** At the domain level every sample is almost entirely Bacteria (~100 %). Unassigned, Archaea and Eukaryota are negligible slivers. The 16S primers amplified bacterial DNA specifically, with little non-target amplification and almost no unclassified reads, so the data suit bacterial diversity analysis. One domain says nothing about community differences; finer levels are needed.
 
