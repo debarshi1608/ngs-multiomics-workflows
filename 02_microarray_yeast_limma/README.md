@@ -4,7 +4,6 @@
 **Data / organism.** Six CEL files `EWE11465_0001_WT1`, `_0002_WT2`, `_0003_WT3`, `_0004_drna1`, `_0005_drna2`, `_0006_drna3` (3 WT, 3 Mutant), read from `/home/ibab/bio-env`; the object is named `yeast_microchip`. Note: the package warnings mention `ecoli2cdf` and the annotation file (`EWE11465_18380_Results_021517.MAS5.TXT`) lists IDs such as `MG1655_mrr_b4351` and `EDL933_Z0312`.
 **Tools.** R, affy, limma, tidyverse (ggplot2, dplyr).
 
-Source PDFs: `day_2_Debarshi_Adhikary.pdf` is a subset of `day_3_Debarshi.pdf`, which is a subset of `Debarshi_day_4_011.pdf`. **`Debarshi_day_4_011.pdf` is the superset** and is the source of `scripts/` and `results/`; the other two are kept in `reports/`.
 
 ## Procedure
 1. Read CEL files with `ReadAffy(celfile.path = celpath, compress = TRUE)`, take `exprs()` as a data frame and preview it (`scripts/01_affy_qc_rma.R`).
@@ -72,23 +71,7 @@ MA plots (original, log, normalised):
 
 **Annotation.** The annotation file has 14 columns (`Probe Set ID`, six MAS5 signal columns, `Representative Public ID`, `Gene Title`, `Gene Symbol`, Gene Ontology BP/CC/MF, `Pathway`). Examples: 1759069_at = MG1655_mrr_b4351, gene symbol `mrr`; 1759071_s_at = MG1655_b2503, `ECs3365 /// yfgF`; 1759073_at = MG1655_ycfK_b1154, `stfP`. The joined table has 11 columns.
 
-## Interpretation
-The notebook contains no results discussion, only the student's own explanatory `##` comments on the method (kept in `scripts/02_limma_de_annotation.R`). They are quoted here, lightly cleaned of line-wraps.
 
-**Student notes on the method**
-
-- Groups: "We are grouping this, it groups first three as WT group and next three as Mutant, if it is in alternate order, we can write as WT, mutant, WT, mutant like this... order matters here, we can see two levels, if we write WT1 by mistake it will take that as another level, so instead of two here it will become three and WT1 will not have replicates."
-- Factor / relevel: "Convert the character vector into a factor. Factors take the parameters in an alphanumeric way, which automatically detects what to compare with whom, order does not matter here. relevel tells what we are going to use as reference, it prevents use of that alphanumeric way, and specifically tells what to use as reference, but use of factor is important to tell how many levels are here."
-- Design matrix: "We have to create a design matrix, here first three columns, it will take as wt because it has values of 1 for gene 1 and so on and will take the avg."
-- `~0+Groups`: "the first 0 ... tells to take intercept as 0. No intercept model is also called as means model. Without 0, it will keep the intercept and that will be the mean reference model, there I will get only one column that is mutant. In the means model, if I get 9 in WT and * in Mutant, that states the avg intensity, but in mean reference model the values are in ratio."
-- Averages: "Here the first three columns is 1 for WT, so while calculating the avg intensities from gene 1 for wild type it will take the first three column's intensities and put in the formula of B0WT+B1MT, where it will multiply 0 with the values of next three columns which is effectively mutant types, so we will get avg intensity values for WT for gene1. but the avg will be calculated using lmfit."
-- `makeContrasts`: "Considering WT as reference, and we are comparing against mutants. This is important, if the values are positive it will say that the genes are upregulated in mutants." and "makeContrasts is for defining contrasts, where it is telling to take the differences between mutant and wild type. So it is like specifically defining condition of interest for us."
-- `contrasts.fit`: "contrast matrix and design matrix does not have the avg intensity values, so we are using fit_y here, fit_y have the avg intensity values, variances, SE etc of all the columns, defined by the design matrix. And if there are multiple groups like WT1, MT1, MT2 -- to compare and specify which two we are going to compare we can use contrast matrix."
-- `eBayes`: "Here by eBayes we are using the moderated t-test. It borrows variance info from all the other genes and then calculate the avg and adjust the variances according to that."
-- `topTable`: "from the eBayes we got log of Odds, pvalue etc... top table is used." and "adjusted p value calculated based on Benjamin hotchback correction (BH) and we are writing Inf to calculate fold diff and adj p value for all the genes/probes. It prints in the order of highest expression difference to lowest. If I have given 10 in the 'number' it will calculate for only 10 highest."
-- Fold change: "the fold change is in log2 scale, 1 means 2 fold upregulation and -1 means 2 fold downregulation, 0.6 means 1.5 fold upregulation."
-- Volcano plot: "now plot a volcano plot between log10(Adjpvalue) and logFC... to get to know that pvalue cut off suits the most for our data."
-- Annotation: "we dont have gene id we have prob id, there is a annotation file we have downloaded, there it is present."
 
 ## Files
 ```
